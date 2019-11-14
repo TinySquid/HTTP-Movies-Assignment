@@ -4,7 +4,6 @@ import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
 import MovieUpdate from './Movies/MovieUpdate';
-import axios from "axios";
 import AddMovie from "./Movies/AddMovie";
 
 const App = () => {
