@@ -53,6 +53,9 @@ const MovieUpdate = props => {
 
     const movie = inputs;
 
+    //Purge empty actor elements before sending to server
+    movie.stars = movie.stars.filter(star => star !== "")
+
     //Update movie details
     axios.put(`http://localhost:5000/api/movies/${movie.id}`, movie)
       .then(res => alert('Movie Details Updated!'))
