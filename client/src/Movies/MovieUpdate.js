@@ -3,14 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const MovieUpdate = props => {
-  /*
-  Format to send to server endpoint
-    id: 4,
-    title: "Dumb and Dumber",
-    director: "The Farely Brothers",
-    metascore: 76,
-    stars: ["Jim Carrey", "Jeff Daniels", "Lauren Holly"]
-*/
+  //Form input state
   const [inputs, setInputs] = useState({
     id: null,
     title: '',
@@ -19,6 +12,7 @@ const MovieUpdate = props => {
     stars: []
   });
 
+  //Set state to movie details
   useEffect(() => {
     axios
       .get(`http://localhost:5000/api/movies/${props.match.params.id}`)
@@ -56,7 +50,10 @@ const MovieUpdate = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     const movie = inputs;
+
+    //Update movie details
     axios.put(`http://localhost:5000/api/movies/${movie.id}`, movie)
       .then(res => alert('Movie Details Updated!'))
       .catch(error => alert(error))
@@ -78,6 +75,7 @@ const MovieUpdate = props => {
       <input type="text" name="metascore" value={inputs.metascore} onChange={handleChange} />
       </label>
       <h2>Actors</h2>
+      {/* Map over stars and dynamically create an input for each one */}
       {inputs.stars.map((star, idx) => (
         <input key={idx} data-id={idx} type="text" name="stars" value={inputs.stars[idx]} onChange={handleChange} />
       ))}
