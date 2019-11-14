@@ -5,6 +5,11 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -97,11 +102,6 @@ body {
   color: white;
 }
 
-.home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
-}
-
 .movie-warning {
   color: red;
   text-align: center;
@@ -177,4 +177,20 @@ body {
 }
 .add-actor button {
   width: 10%;
+}
+
+.buttons {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.buttons div {
+  background-color: lightskyblue;
+  margin: .2rem;
+  padding: .2rem 1rem;
+}
+
+.buttons div:hover {
+  background-color: aquamarine;
 }
