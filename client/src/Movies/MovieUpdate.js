@@ -56,7 +56,11 @@ const MovieUpdate = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    props.updateMovie(inputs);
+    const movie = inputs;
+    axios.put(`http://localhost:5000/api/movies/${movie.id}`, movie)
+      .then(res => alert('Movie Details Updated!'))
+      .catch(error => alert(error))
+      .finally(() => props.history.push(`/movies/${movie.id}`));
   }
 
   return (
