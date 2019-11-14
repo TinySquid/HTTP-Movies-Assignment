@@ -24,7 +24,7 @@ const MovieUpdate = props => {
       .get(`http://localhost:5000/api/movies/${props.match.params.id}`)
       .then(res => setInputs(res.data))
       .catch(err => console.log(err.response));
-  }, []);
+  }, [props.match.params.id]);
 
   const handleChange = e => {
     //Shorter name
