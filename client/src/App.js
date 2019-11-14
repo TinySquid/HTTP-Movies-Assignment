@@ -21,7 +21,6 @@ const App = () => {
     !req.body.metascore ||
     !req.body.stars
     */
-    console.log('Update Movie Button Clicked');
   };
 
   return (
@@ -34,7 +33,7 @@ const App = () => {
           return <Movie {...props} addToSavedList={addToSavedList} />;
         }}
       />
-      <Route path="/update-movie/:id" component={MovieUpdate} />
+      <Route path="/update-movie/:id" render={props => <MovieUpdate {...props} updateMovie={updateMovie} />} />
     </>
   );
 };
