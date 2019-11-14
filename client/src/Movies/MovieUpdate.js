@@ -20,6 +20,11 @@ const MovieUpdate = props => {
       .catch(err => console.log(err.response));
   }, [props.match.params.id]);
 
+  const addActor = e => {
+    e.preventDefault();
+    setInputs({ ...inputs, stars: [...inputs.stars, ''] });
+  }
+
   const handleChange = e => {
     //Shorter name
     const input = e.target;
@@ -82,6 +87,9 @@ const MovieUpdate = props => {
       {inputs.stars.map((star, idx) => (
         <input key={idx} data-id={idx} type="text" name="stars" value={inputs.stars[idx]} onChange={handleChange} />
       ))}
+      <div className="add-actor">
+        <button onClick={addActor}>+</button>
+      </div>
       <button type="submit">Submit</button>
     </form>
   )
