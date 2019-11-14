@@ -43,16 +43,19 @@ body {
 .saved-movie {
   margin: 0 10px;
 }
+
 .saved-active {
   color: blue;
   border: 1px solid grey;
   padding: 5px;
 }
+
 .save-wrapper {
   position: relative;
   width: 75%;
   margin: 1rem auto;
 }
+
 .save-button {
   position: absolute;
   top: 25px;
@@ -61,6 +64,7 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
+
 .save-button:hover {
   background-color: green;
   color: white;
@@ -102,6 +106,7 @@ body {
 .update-movie label {
   width: 100%;
 }
+
 .update-movie input {
   width: 100%;
   margin: 1rem 0.1rem;
@@ -112,4 +117,9 @@ body {
   border-bottom: 1px solid black;
   padding-bottom: 2%;
   width: 100%;
+}
+
+.update-movie button {
+  width: 50%;
+  height: 2rem;
 }
