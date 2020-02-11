@@ -5,6 +5,11 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -43,17 +48,47 @@ body {
 .saved-movie {
   margin: 0 10px;
 }
+
 .saved-active {
   color: blue;
   border: 1px solid grey;
   padding: 5px;
 }
+
 .save-wrapper {
   position: relative;
   width: 75%;
   margin: 1rem auto;
 }
+
 .save-button {
+  position: absolute;
+  top: 25px;
+  right: 181px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+
+.save-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.update-button {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.update-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.delete-button {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -61,17 +96,101 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
-.save-button:hover {
+
+.delete-button:hover {
   background-color: green;
   color: white;
-}
-
-.home-button {
-  padding: 5px 10px;
-  background-color: lightskyblue;
 }
 
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.update-movie {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 25%;
+  border: 1px solid black;
+  padding: 1%;
+}
+
+.update-movie label {
+  width: 100%;
+}
+
+.update-movie input {
+  width: 100%;
+  margin: 1rem 0.1rem;
+  box-sizing: border-box;
+}
+
+.update-movie h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 2%;
+  width: 100%;
+}
+
+.update-movie button {
+  width: 50%;
+  height: 2rem;
+}
+
+.add-movie {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 25%;
+  border: 1px solid black;
+  padding: 1%;
+}
+
+.add-movie label {
+  width: 100%;
+}
+
+.add-movie input {
+  width: 100%;
+  margin: 1rem 0.1rem;
+  box-sizing: border-box;
+}
+
+.add-movie h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 2%;
+  width: 100%;
+}
+
+.add-movie button {
+  width: 50%;
+  height: 2rem;
+}
+
+.add-actor {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+}
+.add-actor button {
+  width: 10%;
+}
+
+.buttons {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.buttons div {
+  background-color: lightskyblue;
+  margin: .2rem;
+  padding: .2rem 1rem;
+}
+
+.buttons div:hover {
+  background-color: aquamarine;
 }
